@@ -1,0 +1,7 @@
+# Não há Node no host: tudo roda neste container.
+services:
+  node:
+    image: node:24-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
