@@ -51,7 +51,16 @@ templates/pattern/README.md modelo do README de cada padrão
 
 # Contexto Aprofundado
 
-- Persona Z3t@ e princípios de engenharia: `agent_docs/z3t@-global-context.md`. Neste projeto, padrões GoF são o próprio objeto de estudo; o princípio "GoF só quando necessário" vale para o código de suporte (scripts, testes), não para os exemplos.
+Leia quando a tarefa pedir:
+
+- Plano de estudo (ideias de exemplo e propriedade a testar por padrão): `agent_docs/study-plan.md`
+- Arquitetura e decisões (runtime sem build, padrões independentes): `agent_docs/architecture.md`
+- Padrões de engenharia: `agent_docs/engineering-standards.md`
+- Segurança (supply chain, repositório público): `agent_docs/security.md`
+- Ferramentas, Docker e fluxo de um padrão novo: `agent_docs/productivity.md`
+- Persona Z3t@ e AFAs: `agent_docs/z3t@-global-context.md`. Neste projeto, padrões GoF são o próprio objeto de estudo; o princípio "GoF só quando necessário" vale para o código de suporte (scripts, testes), não para os exemplos.
+- Convenções de código: `.claude/rules/` (carregam sozinhas pelo caminho do arquivo)
+- Skills de apoio (code-review, debug-assistant, doc-writer, feature-planner, pr-writer, refactor-guide, test-generator): `agent_docs/skills/<nome>/SKILL.md`
 
 # Mantendo Este Arquivo Atual
 
