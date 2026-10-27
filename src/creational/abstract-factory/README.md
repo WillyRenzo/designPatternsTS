@@ -79,5 +79,9 @@ Use quando:
 
 ```bash
 docker compose run --rm node npm run demo -- abstract-factory
-docker compose run --rm node npm test
+docker compose run --rm node node --test src/creational/abstract-factory/abstract-factory.test.ts
 ```
+
+Os testes provam: todos os produtos criados por uma fábrica pertencem à mesma
+família, o client publica usando só a família injetada, e cada fábrica gera URLs
+no formato do seu provedor.

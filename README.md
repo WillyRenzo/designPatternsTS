@@ -11,10 +11,19 @@ Não há Node no host: tudo roda no container `node:24-alpine` do
 
 ```bash
 docker compose run --rm node npm ci                              # instala dependências
-docker compose run --rm node npm run demo -- abstract-factory    # executa o exemplo de um padrão
+docker compose run --rm node npm run demo -- <padrao>            # executa o exemplo de um padrão
 docker compose run --rm node npm test                            # testes de todos os padrões
 docker compose run --rm node npm run typecheck                   # tsc em modo strict
 ```
+
+### Testando cada padrão
+
+Prefixe cada comando com `docker compose run --rm node`.
+
+| Padrão | Demo | Testes | O que os testes provam |
+|---|---|---|---|
+| [Abstract Factory](src/creational/abstract-factory/) | `npm run demo -- abstract-factory` | `node --test src/creational/abstract-factory/abstract-factory.test.ts` | todos os produtos de uma fábrica são da mesma família (AWS ou Azure); o client publica só com a família injetada |
+| [Builder](src/creational/builder/) | `npm run demo -- builder` | `node --test src/creational/builder/builder.test.ts` | os mesmos passos do Director geram um `Request` e um comando curl equivalentes; parâmetros opcionais; escape de aspas no curl; passo fora de ordem falha cedo |
 
 O Node 24 executa `.ts` direto (_type stripping_), então não há build nem
 dependência de runtime: o TypeScript só faz a checagem de tipos, e os testes
@@ -82,3 +91,4 @@ A ordem segue o catálogo do livro.
 2. Copie `templates/pattern/README.md` para a pasta e preencha.
 3. Implemente os participantes, um `main.ts` e um `<padrao>.test.ts`.
 4. Rode `typecheck` e `test`, e marque ✅ no roteiro acima.
+5. Adicione o padrão à tabela [Testando cada padrão](#testando-cada-padrão), com os comandos de demo e de teste e o que os testes provam.

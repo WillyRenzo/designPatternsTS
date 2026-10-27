@@ -37,5 +37,7 @@
 
 ```bash
 docker compose run --rm node npm run demo -- <nome-do-padrao>
-docker compose run --rm node npm test
+docker compose run --rm node node --test src/<categoria>/<nome-do-padrao>/<nome-do-padrao>.test.ts
 ```
+
+Os testes provam: <a propriedade central do padrão e os casos de borda cobertos>.

@@ -100,5 +100,9 @@ Use quando:
 
 ```bash
 docker compose run --rm node npm run demo -- builder
-docker compose run --rm node npm test
+docker compose run --rm node node --test src/creational/builder/builder.test.ts
 ```
+
+Os testes provam: os mesmos passos do Director geram um `Request` e um comando
+curl equivalentes, os parâmetros opcionais só entram quando informados, o curl
+escapa aspas simples do corpo, e um passo fora de ordem falha cedo.
