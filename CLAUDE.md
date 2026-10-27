@@ -43,6 +43,7 @@ templates/pattern/README.md modelo do README de cada padrão
 
 - **Só sintaxe apagável** (`erasableSyntaxOnly`): nada de `enum`, `namespace` ou parameter properties; use union de literais e campos declarados. Imports relativos com extensão `.ts` e `import type` para tipos.
 - **Cada padrão novo:** pasta na categoria certa, README a partir do template, `main.ts`, teste, e ✅ no roteiro do `README.md` raiz.
+- **Instruções de teste são obrigatórias:** todo padrão entra na tabela "Testando cada padrão" do `README.md` raiz (comando de demo, comando de teste do padrão e o que os testes provam), e a seção "Rodando" do README do padrão traz os mesmos comandos.
 - **Exemplos próprios, não cópia do livro:** prefira cenários de backend realistas (com implementações em memória) aos exemplos de widgets/labirinto do livro, e mapeie os participantes do livro na tabela do README.
 - **Explique o que muda no TypeScript** em relação ao C++/Smalltalk do livro (interface vs. classe abstrata, `#private`, composição na raiz em vez de Singleton etc.).
 - Antes de considerar um padrão pronto, rode `typecheck`, `test` e o `demo` dele.

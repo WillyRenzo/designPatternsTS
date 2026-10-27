@@ -22,7 +22,7 @@ docker compose run --rm node node --test src/creational/abstract-factory/abstrac
 1. Crie `src/<categoria>/<padrao>/` e copie `templates/pattern/README.md`.
 2. Implemente os participantes, o `main.ts` e o teste (veja `.claude/rules/patterns.md`).
 3. `typecheck`, `test` e `demo -- <padrao>`.
-4. Marque ✅ no roteiro do `README.md` raiz e em `study-plan.md`.
+4. Marque ✅ no roteiro do `README.md` raiz e em `study-plan.md`, e adicione o padrão à tabela "Testando cada padrão" do `README.md` raiz.
 5. Commits atômicos (`feat(<categoria>/<padrao>): ...`, `docs: ...`) e push.
 
 ## Git e GitHub
