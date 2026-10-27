@@ -43,7 +43,7 @@ A ordem segue o catálogo do livro.
 | Dia | Padrão | Status |
 |---|---|---|
 | 01 | [Abstract Factory](src/creational/abstract-factory/) | ✅ |
-| 02 | Builder | ⏳ |
+| 02 | [Builder](src/creational/builder/) | ✅ |
 | 03 | Factory Method | ⏳ |
 | 04 | Prototype | ⏳ |
 | 05 | Singleton | ⏳ |
