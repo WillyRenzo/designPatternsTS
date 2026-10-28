@@ -18,7 +18,7 @@ deixar claro o problema que o padrão resolve. O status oficial fica no roteiro 
 |---|---|---|---|
 | 01 | Abstract Factory ✅ | Famílias de nuvem (AWS: S3 + SQS; Azure: Blob + Service Bus) | produtos da mesma fábrica são da mesma família |
 | 02 | Builder ✅ | Requisições da API de pedidos montadas pelo Director como `Request` (fetch) ou comando curl | mesma sequência de passos gera representações diferentes |
-| 03 | Factory Method | Exportador de relatórios (CSV, JSON) onde a subclasse decide o formatador | a classe base não conhece o produto concreto |
+| 03 | Factory Method ✅ | Recebimento de webhooks (Stripe, GitHub): a subclasse cria o verificador de assinatura HMAC | a classe base não conhece o produto concreto |
 | 04 | Prototype | Templates de notificação clonados e personalizados | o clone é independente do original (cópia profunda) |
 | 05 | Singleton | Registro de configuração; comparar com injeção na raiz | instância única e seus custos para testar |
 
