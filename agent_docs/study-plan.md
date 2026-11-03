@@ -26,7 +26,7 @@ deixar claro o problema que o padrão resolve. O status oficial fica no roteiro 
 
 | Dia | Padrão | Ideia de exemplo | Propriedade a testar |
 |---|---|---|---|
-| 06 | Adapter | Gateways de pagamento com APIs diferentes atrás de uma interface | o client usa um contrato único |
+| 06 | Adapter ✅ | Gateways de pagamento (SDK moderno e banco legado ISO 8583) atrás de uma interface, com fallback | o client usa um contrato único |
 | 07 | Bridge | Notificações (alerta, lembrete) × canais (e-mail, SMS) | abstração e implementação variam sem explosão de classes |
 | 08 | Composite | Permissões ou árvore de categorias com totais | folha e composto tratados uniformemente |
 | 09 | Decorator | Pipeline de um repositório: cache, retry, log | decoradores empilháveis em qualquer ordem |

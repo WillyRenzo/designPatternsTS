@@ -27,6 +27,7 @@ Prefixe cada comando com `docker compose run --rm node`.
 | [Factory Method](src/creational/factory-method/) | `npm run demo -- factory-method` | `node --test src/creational/factory-method/factory-method.test.ts` | o mesmo `receive()` aceita cada provedor (Stripe, GitHub) com o verificador criado pela subclasse e rejeita o formato do outro; subclasse nova estende sem mudar o Creator; corpo adulterado, segredo errado e replay são rejeitados |
 | [Prototype](src/creational/prototype/) | `npm run demo -- prototype` | `node --test src/creational/prototype/prototype.test.ts` | o clone é independente do protótipo (cópia profunda); o registro entrega um objeto novo da mesma classe e guarda uma cópia do que recebeu; protótipo derivado sem classe nova; `structuredClone` perde a classe e os `#private` |
 | [Singleton](src/creational/singleton/) | `npm run demo -- singleton` | `node --test src/creational/singleton/singleton.test.ts` | `getInstance()` devolve sempre a mesma instância; módulos que não se conhecem escrevem no mesmo registro de métricas; construtor bloqueado em runtime; reset para testes; formato do Prometheus; o mesmo arquivo carregado como outro módulo cria outro singleton |
+| [Adapter](src/structural/adapter/) | `npm run demo -- adapter` | `node --test src/structural/adapter/adapter.test.ts` | os dois SDKs de pagamento (moderno e legado) chegam ao checkout com os mesmos status padronizados; centavos viram `"reais,centavos"` sem ponto flutuante; fallback só quando o provedor está fora do ar; idempotência por pedido |
 
 O Node 24 executa `.ts` direto (_type stripping_), então não há build nem
 dependência de runtime: o TypeScript só faz a checagem de tipos, e os testes
@@ -64,7 +65,7 @@ A ordem segue o catálogo do livro.
 
 | Dia | Padrão | Status |
 |---|---|---|
-| 06 | Adapter | ⏳ |
+| 06 | [Adapter](src/structural/adapter/) | ✅ |
 | 07 | Bridge | ⏳ |
 | 08 | Composite | ⏳ |
 | 09 | Decorator | ⏳ |
