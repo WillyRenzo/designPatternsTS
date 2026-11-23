@@ -29,6 +29,7 @@ Prefixe cada comando com `docker compose run --rm node`.
 | [Singleton](src/creational/singleton/) | `npm run demo -- singleton` | `node --test src/creational/singleton/singleton.test.ts` | `getInstance()` devolve sempre a mesma instância; módulos que não se conhecem escrevem no mesmo registro de métricas; construtor bloqueado em runtime; reset para testes; formato do Prometheus; o mesmo arquivo carregado como outro módulo cria outro singleton |
 | [Adapter](src/structural/adapter/) | `npm run demo -- adapter` | `node --test src/structural/adapter/adapter.test.ts` | os dois SDKs de pagamento (moderno e legado) chegam ao checkout com os mesmos status padronizados; centavos viram `"reais,centavos"` sem ponto flutuante; fallback só quando o provedor está fora do ar; idempotência por pedido |
 | [Bridge](src/structural/bridge/) | `npm run demo -- bridge` | `node --test src/structural/bridge/bridge.test.ts` | 2 notificações e 3 canais (5 classes) cobrem as 6 combinações; canal novo e notificação nova entram sem alterar o outro lado; regras de formato (limite do SMS, prefixo de urgência) ficam no canal |
+| [Composite](src/structural/composite/) | `npm run demo -- composite` | `node --test src/structural/composite/composite.test.ts` | permissão avulsa e papel inteiro são tratados do mesmo jeito pelo guard; herança em vários níveis; curinga `recurso:*`; papel compartilhado sem duplicar e com mudanças propagadas; ciclos rejeitados; remoção revoga |
 
 O Node 24 executa `.ts` direto (_type stripping_), então não há build nem
 dependência de runtime: o TypeScript só faz a checagem de tipos, e os testes
@@ -68,7 +69,7 @@ A ordem segue o catálogo do livro.
 |---|---|---|
 | 06 | [Adapter](src/structural/adapter/) | ✅ |
 | 07 | [Bridge](src/structural/bridge/) | ✅ |
-| 08 | Composite | ⏳ |
+| 08 | [Composite](src/structural/composite/) | ✅ |
 | 09 | Decorator | ⏳ |
 | 10 | Facade | ⏳ |
 | 11 | Flyweight | ⏳ |
