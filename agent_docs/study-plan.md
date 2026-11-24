@@ -29,7 +29,7 @@ deixar claro o problema que o padrão resolve. O status oficial fica no roteiro 
 | 06 | Adapter ✅ | Gateways de pagamento (SDK moderno e banco legado ISO 8583) atrás de uma interface, com fallback | o client usa um contrato único |
 | 07 | Bridge ✅ | Notificações (alerta de incidente, lembrete de fatura) × canais (e-mail, SMS, Slack) | abstração e implementação variam sem explosão de classes |
 | 08 | Composite ✅ | Permissões RBAC: papéis que agrupam permissões e outros papéis, com curinga e detecção de ciclo | folha e composto tratados uniformemente |
-| 09 | Decorator | Pipeline de um repositório: cache, retry, log | decoradores empilháveis em qualquer ordem |
+| 09 | Decorator ✅ | Repositório de produtos com cache (TTL), retry com backoff e log, comparando ordens da pilha | decoradores empilháveis em qualquer ordem |
 | 10 | Facade | Checkout orquestrando estoque, pagamento e envio | o client usa um ponto de entrada só |
 | 11 | Flyweight | Ícones/estilos de mapa ou metadados de produtos repetidos | estado intrínseco compartilhado |
 | 12 | Proxy | Proxy de proteção e lazy loading de um serviço caro | acesso controlado sem o client perceber |

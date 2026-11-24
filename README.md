@@ -30,6 +30,7 @@ Prefixe cada comando com `docker compose run --rm node`.
 | [Adapter](src/structural/adapter/) | `npm run demo -- adapter` | `node --test src/structural/adapter/adapter.test.ts` | os dois SDKs de pagamento (moderno e legado) chegam ao checkout com os mesmos status padronizados; centavos viram `"reais,centavos"` sem ponto flutuante; fallback só quando o provedor está fora do ar; idempotência por pedido |
 | [Bridge](src/structural/bridge/) | `npm run demo -- bridge` | `node --test src/structural/bridge/bridge.test.ts` | 2 notificações e 3 canais (5 classes) cobrem as 6 combinações; canal novo e notificação nova entram sem alterar o outro lado; regras de formato (limite do SMS, prefixo de urgência) ficam no canal |
 | [Composite](src/structural/composite/) | `npm run demo -- composite` | `node --test src/structural/composite/composite.test.ts` | permissão avulsa e papel inteiro são tratados do mesmo jeito pelo guard; herança em vários níveis; curinga `recurso:*`; papel compartilhado sem duplicar e com mudanças propagadas; ciclos rejeitados; remoção revoga |
+| [Decorator](src/structural/decorator/) | `npm run demo -- decorator` | `node --test src/structural/decorator/decorator.test.ts` | as 6 ordens de cache, retry e log dão o mesmo resultado para o client, mas cada camada observa coisas diferentes; cache com TTL e invalidação no save; retry só de falhas passageiras e só em leituras; log não engole erros |
 
 O Node 24 executa `.ts` direto (_type stripping_), então não há build nem
 dependência de runtime: o TypeScript só faz a checagem de tipos, e os testes
@@ -70,7 +71,7 @@ A ordem segue o catálogo do livro.
 | 06 | [Adapter](src/structural/adapter/) | ✅ |
 | 07 | [Bridge](src/structural/bridge/) | ✅ |
 | 08 | [Composite](src/structural/composite/) | ✅ |
-| 09 | Decorator | ⏳ |
+| 09 | [Decorator](src/structural/decorator/) | ✅ |
 | 10 | Facade | ⏳ |
 | 11 | Flyweight | ⏳ |
 | 12 | Proxy | ⏳ |
